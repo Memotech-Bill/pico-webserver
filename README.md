@@ -1,5 +1,32 @@
 # pico-webserver
 
+This fork has been revised to build alongside pico-sdk (includes tinyusb) and
+pico-extras (includes lwip), rather than importing sub-modules.
+
+## Raspberry Pi Build Instructions
+
+If the Pico development environment has not been installed, first do that:
+
+    wget https://raw.githubusercontent.com/raspberrypi/pico-setup/master/pico_setup.sh
+    chmod +x pico_setup.sh
+    ./pico_setup.sh
+
+Then build the webserver:
+
+    cd pico
+    git clone https://github.com/Memotech-Bill/pico-webserver.git
+    cd pico-webserver
+    mkdir build
+    cd build
+    cmake ..
+    make
+
+Copy the resulting pico-webserver.uf2 file onto the Pico in the usual fashion.
+
+Establishing the USB Network connection seems to be unreliable. This is under investigation.
+
+# Original README
+
 Webserver example that came with TinyUSB slightly modified to run on a Raspberry Pi Pico.
 Lets the Pico pretend to be a USB Ethernet device. Runs a webinterface at http://192.168.7.1/
 
