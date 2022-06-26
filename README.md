@@ -21,7 +21,7 @@ Then build the webserver:
     cmake ..
     make
 
-Copy the resulting pico-webserver.uf2 file onto the Pico in the usual fashion.
+Copy the resulting pico_webserver.uf2 file onto the Pico in the usual fashion.
 
 Establishing the USB Network connection seems to be unreliable. This is under investigation.
 
